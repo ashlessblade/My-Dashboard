@@ -13,6 +13,13 @@ h1 {
   text-align: center;
 }
 
+h6 {
+  font-size: 25px;
+  margin: 0 0 5px 0;
+
+}
+
+
 p,
 li {
   font-size: 16px;
@@ -21,13 +28,14 @@ li {
 }
 
 html {
-  background-color: #d8fbbc;
+  background-color: #6b6c6a;
 }
+
 
 body {
   width: 1100px;
   margin: 0 auto;
-  background-color: #83f3f7;
+  background-color: #b5f2f4;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
@@ -36,4 +44,231 @@ h1 {
   padding: 20px 0;
   color: #000000;
   text-shadow: 3px 3px 1px rgb(248, 252, 0);
+}
+
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 40px;
+    background-color: #d2d2d2;
+    padding: 0 20px;
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+.card-container{
+    display:flex;
+    justify-content:center;
+    gap:50px;             
+    flex-wrap:wrap;  
+    text-align: center;      
+}
+
+.flip-card{
+    width:250px;
+    height:180px;
+    perspective:1000px;
+}
+
+.flip-card-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    transition:transform 0.8s;
+    transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform:rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:15px;
+    backface-visibility:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:20px;
+    color:white;
+    box-shadow:0 px 15px rgba(0,0,0,0.2);
+}
+
+.flip-card-front{
+    background:#3498db;
+}
+
+.flip-card-back{
+    background:#2ecc71;
+    transform:rotateY(180deg);
+}
+
+
+
+.skill {
+    padding: 25px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.skill h3 {
+    font-size: 25px;
+    margin: 0;
+    letter-spacing: 2px;
+    color: #1abc9c;
+}
+
+.skill p {
+    margin: 8px 0 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.skill p {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.skill:hover p {
+    max-height: 50px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+
+.learning {
+    max-width: 900px;
+    margin: 0 ;
+    
+}
+
+
+
+.topic-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.topic-number {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+.topic-header h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+details {
+    border-top: 1px solid #070404;
+}
+
+summary {
+    padding: 18px 0;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+label {
+    display: block;
+    padding: 8px 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+
+
+
+
+
+.quotes {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+
+.quote-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.quote-box {
+    border: 1px solid #060606;
+    padding: 35px;
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: transform 0.2s ease;
+}
+
+.quote-box:hover {
+    transform: translateY(-3px);
+}
+
+.quote {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.author {
+    margin: 30px 0 0;
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+
+    .quote-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-box {
+        padding: 25px;
+    }
+
+    .quote {
+        font-size: 18px;
+    }
+
 }
